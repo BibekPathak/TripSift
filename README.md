@@ -26,7 +26,7 @@ TripSift is a modern ride aggregator platform that lets users compare and book r
 
 ### 1. **Clone the Repository**
 ```sh
-git clone <your-repo-url>
+git clone https://github.com/BibekPathak/TripSift.git
 cd ride-aggregator
 ```
 

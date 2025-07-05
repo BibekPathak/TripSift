@@ -1,0 +1,28 @@
+{
+  "name": "ride-aggregator",
+  "version": "1.0.0",
+  "description": "A ride booking platform that aggregates prices from multiple providers",
+  "main": "server/index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm run dev",
+    "client": "cd client && npm start",
+    "build": "cd client && npm run build",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "keywords": [
+    "ride-booking",
+    "aggregator",
+    "uber",
+    "ola",
+    "rapido"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@react-google-maps/api": "^2.20.7"
+  }
+}

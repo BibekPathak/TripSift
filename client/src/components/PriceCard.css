@@ -1,0 +1,146 @@
+.price-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.price-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.price-card.cheapest {
+  border: 3px solid #28a745;
+  transform: scale(1.05);
+}
+
+.price-card.cheapest::before {
+  content: 'BEST DEAL';
+  position: absolute;
+  top: 10px;
+  right: -30px;
+  background: #28a745;
+  color: white;
+  padding: 4px 40px;
+  font-size: 12px;
+  font-weight: bold;
+  transform: rotate(45deg);
+}
+
+.provider-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.provider-logo {
+  font-size: 2rem;
+  margin-right: 12px;
+}
+
+.provider-details h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.provider-details p {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.price-display {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.price-amount {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #333;
+}
+
+.price-currency {
+  font-size: 1.2rem;
+  color: #666;
+  margin-left: 4px;
+}
+
+.ride-details {
+  display: flex;
+  justify-content: space-between;
+  margin: 16px 0;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.ride-detail {
+  text-align: center;
+}
+
+.ride-detail-label {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.ride-detail-value {
+  font-weight: 600;
+  color: #333;
+}
+
+.book-button {
+  width: 100%;
+  padding: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.book-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.book-button.primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.book-button.primary:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+}
+
+.book-button.secondary {
+  background: #f8f9fa;
+  color: #333;
+  border: 2px solid #e9ecef;
+}
+
+.book-button.secondary:hover:not(:disabled) {
+  background: #e9ecef;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .price-card.cheapest {
+    transform: none;
+  }
+  
+  .price-card.cheapest::before {
+    font-size: 10px;
+    padding: 2px 30px;
+  }
+} 
